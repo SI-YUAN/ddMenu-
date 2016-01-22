@@ -686,7 +686,7 @@ return YES;
         
         [navController pushViewController:viewController animated:animated];
 
-        //2此分支  更改.m中的2个方法
+        //2此分支  更改.m中的2个方法  -----4-----
 
     }
     
@@ -698,11 +698,11 @@ return YES;
     
     
 
-    //1现在还是在master主线中  更改
+    //1现在还是在master主线中  更改  -----4-----
     
-    //2此分支  更改.m中的2个方法
+    //2此分支  更改.m中的2个方法  -----4-----
     
-    //3查看此次更改
+    //3查看此次更改-----4-----
     
     
 
