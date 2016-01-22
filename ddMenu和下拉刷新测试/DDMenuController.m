@@ -685,7 +685,9 @@ return YES;
     } else {
         
         [navController pushViewController:viewController animated:animated];
-        //此分支  更改.m中的2个方法
+
+        //2此分支  更改.m中的2个方法
+
     }
     
 }
@@ -695,9 +697,15 @@ return YES;
     NSLog(@"------");
     
     
-    //现在还是在master主线中  更改
+
+    //1现在还是在master主线中  更改
     
-    //此分支  更改.m中的2个方法
+    //2此分支  更改.m中的2个方法
+    
+    //3查看此次更改
+    
+    
+
 }
 
 
