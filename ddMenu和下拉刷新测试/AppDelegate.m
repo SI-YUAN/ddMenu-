@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RootMainViewController.h"
+#import "LeftMainViewController.h"
+#import "DDMenuController.h"
+#import "RightViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +19,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSString *homeDir = NSHomeDirectory();
+    NSLog(@"%@",homeDir);
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    RootMainViewController *rootMainVC = [[RootMainViewController alloc] init];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:rootMainVC];
+    
+    DDMenuController *DDMenuVC = [[DDMenuController alloc] initWithRootViewController:navC];
+    rootMainVC.DDVC = DDMenuVC;
+    
+    LeftMainViewController *leftViewVC = [[LeftMainViewController alloc] init];
+    DDMenuVC.leftViewController = leftViewVC;
+    
+    
+    self.window.rootViewController = DDMenuVC;
+    
+    [self.window makeKeyAndVisible];
+    return YES;
+
     return YES;
 }
 
